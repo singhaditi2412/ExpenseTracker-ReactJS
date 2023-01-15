@@ -1,7 +1,10 @@
 import React, { createContext, useReducer } from "react";
 import ContextReducer from "./ContextReducer";
 
-const initialState = JSON.parse(localStorage.getItem("transactions")) || [];
+const defaultState = { expense: 0, income: 0, transactions: [] };
+
+const initialState =
+  JSON.parse(localStorage.getItem("expenseData")) || defaultState;
 
 export const GlobalContext = createContext(initialState);
 
@@ -18,7 +21,7 @@ export const GlobalProvider = ({ children }) => {
   return (
     <GlobalContext.Provider
       value={{
-        transactions: state.transactions,
+        expenseData: state,
         addTransaction,
       }}
     >

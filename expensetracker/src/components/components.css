@@ -34,8 +34,8 @@
 
 .total-balance {
   white-space: nowrap;
-  width: 50%;
-  overflow: hidden;
+  width: 480px;
+  overflow: hidden; 
   text-overflow: ellipsis;
   padding-left: 10px;
   text-align: left;
@@ -116,4 +116,10 @@
 .expense-money {
   color: red;
   font-weight: bold;
+}
+
+@media (max-width: 800px){
+  .App {
+    width: 100%;
+  }
 }

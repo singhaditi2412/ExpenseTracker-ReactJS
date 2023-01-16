@@ -117,9 +117,3 @@
   color: red;
   font-weight: bold;
 }
-
-@media (max-width: 800px){
-  .App {
-    width: 100%;
-  }
-}

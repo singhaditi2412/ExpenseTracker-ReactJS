@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
-import { GlobalContext } from "../context/Context";
-import "./components.css";
+import { GlobalContext } from "../../context/Context";
+import "./NewTransaction.css";
 
 const NewTransaction = () => {
   const [text, setText] = useState("");
@@ -13,13 +13,13 @@ const NewTransaction = () => {
       setError(true);
       return;
     }
-
-    const NewTransaction = {
+    setError(false);
+    const newTransaction = {
       id: Math.floor(Math.random() * 100000000),
       text: text,
       price: parseInt(price),
     };
-    addTransaction(NewTransaction);
+    addTransaction(newTransaction);
     setPrice("");
     setText("");
   };

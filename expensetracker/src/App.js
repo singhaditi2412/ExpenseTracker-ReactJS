@@ -1,9 +1,9 @@
 import "./App.css";
 import { GlobalProvider } from "./context/Context";
-import TotalBalance from "./components/TotalBalance";
-import NewTransaction from "./components/NewTransaction";
-import IncomeExpenseForm from "./components/IncomeExpenseForm";
-import { HistoryList } from "./components/HistoryList";
+import TotalBalance from "./components/TotalBalance/TotalBalance";
+import NewTransaction from "./components/NewTransaction/NewTransaction";
+import IncomeExpenseForm from "./components/IncomeExpenseForm/IncomeExpenseForm";
+import { HistoryList } from "./components/History/HistoryList";
 const App = () => {
   return (
     <GlobalProvider>
@@ -11,7 +11,7 @@ const App = () => {
         <h1 className="heading">Expense Tracker</h1>
         <TotalBalance />
         <IncomeExpenseForm />
-        <HistoryList/>
+        <HistoryList />
         <NewTransaction />
       </div>
     </GlobalProvider>
